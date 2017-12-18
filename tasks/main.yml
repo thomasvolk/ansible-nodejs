@@ -1,0 +1,22 @@
+---
+# tasks file for ansible-nodejs
+- name: create node installation dir
+  file:
+    path: "{{ target_dir }}"
+    state: directory
+- name: unarchive nodejs binaries
+  unarchive:
+    src: https://nodejs.org/dist/v{{ nodejs_version }}/node-v{{ nodejs_version }}-{{ nodejs_arch }}.tar.gz
+    dest: "{{ target_dir }}"
+    remote_src: 'yes'
+  creates: "{{ target_dir }}/node-v{{ nodejs_version }}-{{ nodejs_arch }}/bin/node"
+- name: create node symlink
+  file:
+    src: "{{ target_dir }}/node-v{{ nodejs_version }}-{{ nodejs_arch }}/bin/node"
+    dest: "{{ bin_dir }}/node"
+    state: link
+- name: create npm symlink
+  file:
+    src: "{{ target_dir }}/node-v{{ nodejs_version }}-{{ nodejs_arch }}/bin/npm"
+    dest: "{{ bin_dir }}/npm"
+    state: link

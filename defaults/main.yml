@@ -1,0 +1,7 @@
+---
+# defaults file for ansible-nodejs
+nodejs_version: 6.5.0
+# raspberry pi: linux-armv6l
+nodejs_arch: linux-x64
+target_dir: /usr/local/lib
+bin_dir: /usr/local/bin
