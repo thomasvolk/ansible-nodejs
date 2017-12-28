@@ -3,6 +3,8 @@ Role Name
 
 Role for installing nodejs binaries.
 
+[![Build Status](https://travis-ci.org/thomasvolk/ansible-nodejs.svg?branch=master)](https://travis-ci.org/thomasvolk/ansible-nodejs)
+
 Role Variables
 --------------
 
