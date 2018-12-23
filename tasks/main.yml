@@ -9,7 +9,7 @@
     src: https://nodejs.org/dist/v{{ nodejs_version }}/node-v{{ nodejs_version }}-{{ nodejs_arch }}.tar.gz
     dest: "{{ target_dir }}"
     remote_src: 'yes'
-  creates: "{{ target_dir }}/node-v{{ nodejs_version }}-{{ nodejs_arch }}/bin/node"
+    creates: "{{ target_dir }}/node-v{{ nodejs_version }}-{{ nodejs_arch }}/bin/node"
 - name: create node symlink
   file:
     src: "{{ target_dir }}/node-v{{ nodejs_version }}-{{ nodejs_arch }}/bin/node"
