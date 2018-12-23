@@ -9,7 +9,7 @@ Role Variables
 --------------
 
 ```
-nodejs_version: 6.5.0
+nodejs_version: 9.11.2
 # raspberry pi: linux-armv6l
 nodejs_arch: linux-x64
 target_dir: /usr/local/lib
