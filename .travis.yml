@@ -11,4 +11,4 @@ install:
   - pip install docker-py
   - pip install ansible
 script:
-  - molecule test
+  - molecule --debug test
