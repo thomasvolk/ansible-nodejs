@@ -16,6 +16,19 @@ target_dir: /usr/local/lib
 bin_dir: /usr/local/bin
 ```
 
+Test
+----
+
+You have to install the tools first:
+```
+pip install docker ansible molecule
+```
+
+For tests just run molecule test:
+```
+molecule test
+```
+
 Example Playbook
 ----------------
 
